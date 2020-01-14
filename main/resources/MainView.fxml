@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.layout.controllers.MainController">
+  <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+              <tabs>
+                <Tab text="Registration">
+                  <content>
+                     <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                        <children>
+                           <Label text="Login" />
+                           <TextField fx:id="registrationLoginTextField" />
+                           <Label text="Password" />
+                           <PasswordField fx:id="registrationPasswordTextField" />
+                           <Label text="Repeat password" />
+                           <PasswordField fx:id="registrationRepeatedPasswordField" />
+                           <Button fx:id="registerButton" alignment="TOP_LEFT" defaultButton="true" mnemonicParsing="false" onAction="#onRegisterButtonClick" text="Register new user" />
+                        </children>
+                        <padding>
+                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        </padding>
+                     </VBox>
+                  </content>
+                </Tab>
+                <Tab text="Login">
+                  <content>
+                        <VBox spacing="10.0">
+                           <children>
+                              <Label text="Login" />
+                              <TextField fx:id="loginTextField" />
+                              <Label text="Password" />
+                              <PasswordField fx:id="loginPasswordField" />
+                              <Button fx:id="loginButton" mnemonicParsing="false" onAction="#onLoginButtonClick" text="Login" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </VBox>
+  </children>
+</VBox>
